@@ -1,0 +1,16 @@
+<form action="/add" method="post">
+    <p>Title: </p>
+    <input type="text" name="title" id="">
+    <p>Content: </p>
+    <textarea name="content" id="" cols="30" rows="10"></textarea>
+    <br><a href=""><button type="submit">Submit Post</button></a>
+</form>
+
+<h1>Posts list:</h1>
+<hr>
+{{#each posts}}
+<small>{{dataValues.createdAt}}</small>
+    <h2>{{dataValues.title}}</h2>
+    <p>{{dataValues.content}}</p>
+    <hr>
+{{/each}}
